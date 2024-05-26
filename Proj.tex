@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{tabu}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{float}
+\begin{document}
+
+\floatstyle{ruled}
+\newfloat{algorithm}{thp}{lop}
+\floatname{algorithm}{Algorithm}
+
+\begin{algorithm}
+
+    \textbf{input}: $v \in \mathbb{R}^{n}$ and $t > 0$
+
+    \textbf{output}: $w$
+
+    \bigskip
+
+    1 $\hspace{1mm}$ Take absolute value of $v$ $u: u_{1} = |v_{1}|, u_{2} = |v_{2}|, \ldots, u_{n} = |v_{n}|$
+
+    2 $\hspace{1mm}$ Sort $u$ into descending order $\mu : \mu_{1} \geq \mu_{2} \geq \ldots \geq \mu_{\rho}$
+
+    3 $\hspace{1mm}$ Find $\rho =$ max$\{j \in {1, \ldots, n}$ $|$ $\mu_{j} - \frac{1}{j}(\sum^{j}_{r=1}\mu_{r} - t) > 0\}$
+
+    4 $\hspace{1mm}$ Define $\theta = \frac{1}{\rho}(\sum^{\rho}_{i=1}\mu_{i} - t)$
+
+    5 $\hspace{1mm}$ Output $w$ given by $w_{i} = sign(v_{i}) * $max$\{u_{i} - \theta, 0\}$
+
+	\caption{Euclidean Norm Projection onto the $l^{1}$ ball of radius t.}
+\end{algorithm}
+
+\end{document}
